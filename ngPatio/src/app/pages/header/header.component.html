@@ -1,0 +1,36 @@
+<header class="container">
+
+    <div class="container-content">
+
+        <label class="title" (click)="goHome()">{{title}}</label>
+        
+        <div class="search-bar">
+            <input class="search-input" matInput  type="text" placeholder="Cidade, estado ou veículo" [(ngModel)]="searchInput">
+            <button class="mat-icon" mat-button *ngIf="searchInput" matSuffix mat-icon-button aria-label="Clear" (click)="searchInput=''">
+                <mat-icon>x</mat-icon>
+            </button>
+        </div>
+
+        <div class="menu-img-div">
+            <img mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="menu-img" [src]="menuImageUrl">
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                    <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Disable alerts</span>
+                </button>
+            </mat-menu>
+        
+        </div>
+
+        <div class="divisor"></div>
+
+        <label class="anunciar" (click)="anunciar()"><strong>Anunciar</strong></label>
+        
+    </div>
+    
+</header>

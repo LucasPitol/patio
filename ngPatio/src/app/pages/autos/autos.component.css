@@ -1,0 +1,24 @@
+.container-listagem {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    margin-top: 300px;
+}
+
+.example-card {
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.loader-spiner {
+    margin: auto;
+}
+
+.mat-spinner::ng-deep circle {
+    stroke: #3F51B5;
+}
