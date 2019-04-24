@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing } from './app.router';
 
-import { MatTabsModule, MatLabel, MatFormField, MatIcon, MatHint, MatFormFieldModule, MatInputModule, MatRippleModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule, MatSelectModule } from '@angular/material';
+import { MatTabsModule, MatLabel, MatFormField, MatIcon, MatHint, MatFormFieldModule, MatInputModule, MatRippleModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule, MatSelectModule, MatAutocompleteModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
