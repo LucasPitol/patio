@@ -9,5 +9,6 @@ import { Component } from '@angular/core';
 export class HomeComponent {
     dreamCarUrl = 'assets/dream-car.png'
 
+    selected = '';
     
 }

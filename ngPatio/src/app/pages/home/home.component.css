@@ -2,7 +2,7 @@
     width: 80%;
     height: 100%;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 .content-div {
@@ -33,6 +33,14 @@
 /*************************************
 ************** input ***************
 **************************************/
+
+::ng-deep .mat-select-content{
+    /* width:2000px; */
+    stroke: red !important;
+    /* font-size: 10px;    */
+}
+
+
 .location-input-div {
     position: relative;
     margin: auto;
