@@ -15,5 +15,10 @@ export const Utils =
 	goHome: function(router: Router)
 	{
 		router.navigate(["home"])
+	},
+
+	goToListagemCards: function(router: Router)
+	{
+		router.navigate(["autos"])
 	}
 }
