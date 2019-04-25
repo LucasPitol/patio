@@ -1,0 +1,50 @@
+.card {
+    width: 220px;
+	height: 270px;
+    /* margin: 0px auto; */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+	margin: 20px;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+	transition: .2s;
+}
+
+/****************************
+********* Card image *********
+*****************************/
+
+.card-image img{
+    width: 220px;
+    border-radius: 3px 3px 0 0;
+}
+
+/****************************
+********* Card body *********
+*****************************/
+
+.card-body {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.marca-modelo {
+    font-size: 18px;
+}
+
+.versao,
+.cambio {
+    font-size: 15px;
+    color: rgb(117, 117, 117);
+}
+
+.bottom {
+    position: relative;
+    /* width: 200px; */
+}
+
+.valor {
+    position: relative;
+    float: right;
+}
