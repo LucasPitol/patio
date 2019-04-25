@@ -2,7 +2,7 @@
     <div class="content-div">
 
         <div class="slogan-div">
-            <span class="slogan"><strong>O carro dos seus sonhos está aqui</strong></span>
+            <span class="slogan"><strong>Um slogan maneirissimo</strong></span>
         </div>
         
         <div>
@@ -13,15 +13,26 @@
             
             <div>
 
-                    <mat-form-field>
-                        <mat-label>Categoria</mat-label>
-                        <mat-select [(value)]="selected" class="mat-select-content">
-                            <mat-option>None</mat-option>
-                            <mat-option value="option1">Option 1</mat-option>
-                            <mat-option value="option2">Option 2</mat-option>
-                            <mat-option value="option3">Option 3</mat-option>
-                        </mat-select>
-                    </mat-form-field>
+                <div class="radio">
+                    <mat-radio-group
+                        aria-labelledby="example-radio-group-label"
+                        class="example-radio-group"
+                        [(ngModel)]="tipoVeiculoSelected">
+                        <mat-radio-button class="example-radio-button" *ngFor="let tipoVeiculo of TiposVeiculo" [value]="tipoVeiculo">
+                            {{tipoVeiculo}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <mat-form-field>
+                    <mat-label>Categoria</mat-label>
+                    <mat-select [(value)]="selected" class="mat-select-content">
+                        <mat-option>None</mat-option>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
                 
                 <!-- <mat-form-field appearance="outline">
                     <mat-label>Outline form field</mat-label>
