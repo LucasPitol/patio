@@ -34,9 +34,12 @@
     margin: 20px;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.filter-btn span {
     font-size: 16px;
-    /* font-weight: 500;
-    line-height: 24px; */
+    font-weight: 500;
+    line-height: 24px;
 }
 
 .filter-btn img {
@@ -57,4 +60,5 @@
 
 .filter-sidenav {
     padding: 20px;
+    width: 350px;
 }
