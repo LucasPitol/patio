@@ -19,6 +19,8 @@ export class AutosComponent implements OnInit {
 
 	@HostBinding('class.is-open')
 
+	items = Array.from({length: 100000}).map((_, i) => `Item #${i}`);
+
 	filterForm: any;
 
 	loading = true;
