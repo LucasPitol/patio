@@ -1,38 +1,89 @@
 <div class="background">
+    <mat-drawer-container class="container" autosize>
 
-    <div class="container-listagem">
-    
-        <div *ngIf="loading" class="loader">
-            <mat-spinner class="loader-spiner"></mat-spinner>
+        <mat-drawer #filterBar class="filter-sidenav" mode="side">
+            <p>Filtro</p>
+            
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+
+                        <mat-panel-title>
+                            <span>
+                                <strong>Localização</strong>
+                            </span>
+                        </mat-panel-title>
+
+                        <mat-panel-description>
+                            {{filterForm.local.estado}}, {{filterForm.local.pais}}
+                        </mat-panel-description>
+
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>País</mat-label>
+                        <input matInput [(ngModel)]="filterForm.local.pais">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Estado</mat-label>
+                        <input matInput [(ngModel)]="filterForm.local.estado">
+                    </mat-form-field>
+
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+
+                        <mat-panel-title>
+                            <strong>Período</strong>
+                        </mat-panel-title>
+
+                        <mat-panel-description>
+                            {{filterForm.periodo.dataInicio}} - {{filterForm.periodo.dataFim}}
+                        </mat-panel-description>
+
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="pickerIni" placeholder="Data inicio" [(ngModel)]="filterForm.periodo.dataInicio">
+                        <mat-datepicker-toggle matSuffix [for]="pickerIni"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerIni></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="pickerFim" placeholder="Data Fim" [(ngModel)]="filterForm.periodo.dataFim">
+                        <mat-datepicker-toggle matSuffix [for]="pickerFim"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerFim></mat-datepicker>
+                    </mat-form-field>
+
+                </mat-expansion-panel>
+            </mat-accordion>
+
+        </mat-drawer>
+          
+        <div class="filter-sidenav-content">
+            <button class="filter-btn" type="button" mat-raised-button (click)="filterBar.toggle()">
+                    <img [src]="filterImageUrl"> <span>Filtrar</span>
+            </button>
         </div>
-        <!-- <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                    <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
-                    </p>
-                </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
-        </mat-card> -->
-    
-        <div *ngIf="!loading" class="home">
-            <div *ngFor="let card of cards" class="carrossel-container">
-    
-                <card-component
-                    [card]="card">
-                </card-component>
-    
+
+
+        <div class="container-listagem">
+
+            <div *ngIf="loading" class="loader">
+                <mat-spinner class="loader-spiner"></mat-spinner>
+            </div>
+        
+            <div *ngIf="!loading" class="home">
+                <div *ngFor="let card of cards" class="carrossel-container">
+
+                    <card-component
+                        [card]="card">
+                    </card-component>
+        
+                </div>
             </div>
         </div>
-    </div>
+    </mat-drawer-container>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { FilterService } from 'src/app/services/filter-service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'autos-component',
@@ -8,20 +9,35 @@ import { FilterService } from 'src/app/services/filter-service';
 })
 
 export class AutosComponent implements OnInit {
-    // cards: { 
-	// 	imageUrl: string,
-    //  marca: string, 
-    //  modelo: string,
-	// 	versao: string,
-	// 	cambio: string,
-	// }[];
+
 	constructor(private filterservice: FilterService) { }
 
 	@HostBinding('class.is-open')
 
-	filterForm: any;
+
+	filterImageUrl = 'assets/filter.png';
+
+	filterFormFromHome: any;
 
 	loading = true;
+
+	filterForm = {
+		tipoVeiculoSelected: '',
+		local: {
+			pais: '',
+			estado: ''
+		},
+		periodo: {
+			dataInicio: '',
+			dataFim: '',
+		},
+		categoria: ''
+	}
+
+	public datePickerLabel: string;
+
+	date = new FormControl(new Date());
+	serializedDate = new FormControl((new Date()).toISOString());
 
 	cards = [
 		{"id": 1, "imageUrl": 'assets/golf.jpg', "marca": "Volkswagen", "modelo": "Golf", "versao": "2.0 GTI 4P", "cambio": "Automático", "valor": 138.41},
@@ -32,7 +48,7 @@ export class AutosComponent implements OnInit {
 
 		this.filterservice.applyFilter.subscribe(
 			filter => {
-				this.filterForm = filter;
+				this.filterFormFromHome = filter;
 ;
 				this.teste(filter);
 			});

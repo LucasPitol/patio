@@ -2,6 +2,10 @@
     background-color: rgb(245, 245, 245);
 }
 
+.container {
+    margin-top: 60px;
+}
+
 .container-listagem {
     position: relative;
     margin: auto;
@@ -20,4 +24,41 @@
 
 .mat-spinner::ng-deep circle {
     stroke: #3F51B5;
+}
+
+/***************************
+********** FILTRO **********
+****************************/
+
+.filter-btn {
+    margin: 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.filter-btn span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.filter-btn img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.filter-container {
+    /* width: 500px; */
+    /* height: 300px; */
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+}
+
+.filter-sidenav-content {
+    display: flex;
+    height: 100%;
+}
+
+.filter-sidenav {
+    padding: 20px;
+    width: 350px;
 }
