@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Utils } from '../../utils/utils';
 import { Router } from '@angular/router';
 import { utils } from 'protractor';
+import { FilterService } from 'src/app/services/filter-service';
 
 @Component({
   selector: 'home-component',
@@ -11,11 +12,12 @@ import { utils } from 'protractor';
 
 export class HomeComponent {
 
-	constructor(private router: Router) { }
+	constructor(private router: Router,
+				private filterService: FilterService) { }
+
+	// @HostListener('')
 
     dreamCarUrl = 'assets/dream-car.png'
-
-	selected = '';
 	
     //tipoVeiculoSelected: string;
 	TiposVeiculo: string[] = ['Passeio', 'Taxi'];
@@ -30,6 +32,8 @@ export class HomeComponent {
 
 	goToListagemCards()
 	{
+		this.filterService.storeFilter(this.filterForm);
+
 		Utils.goToListagemCards(this.router);
 	}
 }

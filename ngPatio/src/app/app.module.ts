@@ -17,6 +17,7 @@ import { AutosComponent } from './pages/autos/autos.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './pages/card/card.component';
 import { AnunciarComponent } from './pages/anunciar/anunciar.component';
+import { FilterService } from './services/filter-service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,9 @@ import { AnunciarComponent } from './pages/anunciar/anunciar.component';
     MatSelectModule,
     MatRadioModule
   ],
-  providers: [],
+  providers: [
+    FilterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

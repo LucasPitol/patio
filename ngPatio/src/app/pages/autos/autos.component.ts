@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { FilterService } from 'src/app/services/filter-service';
 
 @Component({
   selector: 'autos-component',
@@ -14,7 +15,11 @@ export class AutosComponent implements OnInit {
 	// 	versao: string,
 	// 	cambio: string,
 	// }[];
-	constructor() { }
+	constructor(private filterservice: FilterService) { }
+
+	@HostBinding('class.is-open')
+
+	filterForm: any;
 
 	loading = true;
 
@@ -24,7 +29,20 @@ export class AutosComponent implements OnInit {
 	];
 	
 	ngOnInit() {
+
+		this.filterservice.applyFilter.subscribe(
+			filter => {
+				this.filterForm = filter;
+;
+				this.teste(filter);
+			});
+
 		this.getCardsForHome();
+	}
+
+	teste(filter)
+	{
+		console.log(filter);
 	}
 
 	getCardsForHome()
