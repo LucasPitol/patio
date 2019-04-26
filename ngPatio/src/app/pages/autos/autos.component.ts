@@ -21,6 +21,8 @@ export class AutosComponent implements OnInit {
 
 	items = Array.from({length: 100000}).map((_, i) => `Item #${i}`);
 
+	filterImageUrl = 'assets/filter.png';
+
 	filterForm: any;
 
 	loading = true;

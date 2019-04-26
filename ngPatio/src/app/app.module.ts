@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing } from './app.router';
 
-import { MatTabsModule, MatLabel, MatFormField, MatIcon, MatHint, MatFormFieldModule, MatInputModule, MatRippleModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule, MatSelectModule, MatAutocompleteModule, MatRadioModule } from '@angular/material';
+import { MatTabsModule, MatLabel, MatFormField, MatIcon, MatHint, MatFormFieldModule, MatInputModule, MatRippleModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule, MatSelectModule, MatAutocompleteModule, MatRadioModule, MatSidenavModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
@@ -48,7 +48,8 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling';
     MatButtonModule,
     MatSelectModule,
     MatRadioModule,
-    ScrollDispatchModule
+    //ScrollDispatchModule
+    MatSidenavModule
   ],
   providers: [
     FilterService

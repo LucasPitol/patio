@@ -2,6 +2,10 @@
     background-color: rgb(245, 245, 245);
 }
 
+.container {
+    margin-top: 60px;
+}
+
 .container-listagem {
     position: relative;
     margin: auto;
@@ -26,19 +30,31 @@
 ********** FILTRO **********
 ****************************/
 
+.filter-btn {
+    margin: 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    /* font-weight: 500;
+    line-height: 24px; */
+}
+
+.filter-btn img {
+    width: 25px;
+    margin-right: 10px;
+}
+
 .filter-container {
-    position: relative;
-    float: left;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+    /* width: 500px; */
+    /* height: 300px; */
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
 }
 
-.example-viewport {
-    height: 720px;
-    width: 300px;
-    border: none;
+.filter-sidenav-content {
+    display: flex;
+    height: 100%;
 }
 
-.example-item {
-    height: 50px;
+.filter-sidenav {
+    padding: 20px;
 }

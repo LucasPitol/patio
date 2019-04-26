@@ -1,25 +1,33 @@
 <div class="background">
+    <mat-drawer-container class="container" autosize>
 
-    <div class="filter-container">
-        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-            <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
-        </cdk-virtual-scroll-viewport>
-    </div>
-
-    <div class="container-listagem">
-
-        <div *ngIf="loading" class="loader">
-            <mat-spinner class="loader-spiner"></mat-spinner>
+        <mat-drawer #filterBar class="filter-sidenav" mode="side">
+            <p>Filtro</p>
+            
+        </mat-drawer>
+          
+        <div class="filter-sidenav-content">
+            <button class="filter-btn" type="button" mat-button (click)="filterBar.toggle()">
+                    <img [src]="filterImageUrl"> Filtrar
+            </button>
         </div>
-    
-        <div *ngIf="!loading" class="home">
-            <div *ngFor="let card of cards" class="carrossel-container">
 
-                <card-component
-                    [card]="card">
-                </card-component>
-    
+
+        <div class="container-listagem">
+
+            <div *ngIf="loading" class="loader">
+                <mat-spinner class="loader-spiner"></mat-spinner>
+            </div>
+        
+            <div *ngIf="!loading" class="home">
+                <div *ngFor="let card of cards" class="carrossel-container">
+
+                    <card-component
+                        [card]="card">
+                    </card-component>
+        
+                </div>
             </div>
         </div>
-    </div>
+    </mat-drawer-container>
 </div>
