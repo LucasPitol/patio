@@ -15,33 +15,42 @@
                         </mat-panel-title>
 
                         <mat-panel-description>
-                            Rio de Janeiro, RJ
+                            {{filterForm.local.estado}}, {{filterForm.local.pais}}
                         </mat-panel-description>
 
                     </mat-expansion-panel-header>
 
                     <mat-form-field appearance="outline">
                         <mat-label>País</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="filterForm.local.pais">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline">
                         <mat-label>Estado</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="filterForm.local.estado">
                     </mat-form-field>
 
                 </mat-expansion-panel>
                 <mat-expansion-panel (opened)="panelOpenState = true"
                                      (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
+
                         <mat-panel-title>
-                            Self aware panel
+                            <strong>Período</strong>
                         </mat-panel-title>
+
                         <mat-panel-description>
-                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                            {{filterForm.periodo.dataInicio}} - {{filterForm.periodo.dataFim}}
                         </mat-panel-description>
+
                     </mat-expansion-panel-header>
-                        <p>I'm visible because I am open</p>
+
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="picker" placeholder="Data inicio" [(ngModel)]="filterForm.periodo.dataInicio">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+
                     </mat-expansion-panel>
             </mat-accordion>
 
