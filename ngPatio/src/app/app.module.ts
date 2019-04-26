@@ -18,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './pages/card/card.component';
 import { AnunciarComponent } from './pages/anunciar/anunciar.component';
 import { FilterService } from './services/filter-service';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FilterService } from './services/filter-service';
     MatIconModule,
     MatButtonModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    ScrollDispatchModule
   ],
   providers: [
     FilterService

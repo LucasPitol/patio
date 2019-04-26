@@ -21,3 +21,24 @@
 .mat-spinner::ng-deep circle {
     stroke: #3F51B5;
 }
+
+/***************************
+********** FILTRO **********
+****************************/
+
+.filter-container {
+    position: relative;
+    float: left;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+}
+
+.example-viewport {
+    height: 900px;
+    width: 300px;
+    border: none;
+}
+
+.example-item {
+    height: 50px;
+}

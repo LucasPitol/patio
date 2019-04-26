@@ -1,7 +1,13 @@
 <div class="background">
 
+    <div class="filter-container">
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+            <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
+        </cdk-virtual-scroll-viewport>
+    </div>
+
     <div class="container-listagem">
-    
+
         <div *ngIf="loading" class="loader">
             <mat-spinner class="loader-spiner"></mat-spinner>
         </div>
