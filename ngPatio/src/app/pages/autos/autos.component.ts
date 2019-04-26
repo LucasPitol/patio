@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { FilterService } from 'src/app/services/filter-service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'autos-component',
@@ -34,6 +35,9 @@ export class AutosComponent implements OnInit {
 	}
 
 	public datePickerLabel: string;
+
+	date = new FormControl(new Date());
+	serializedDate = new FormControl((new Date()).toISOString());
 
 	cards = [
 		{"id": 1, "imageUrl": 'assets/golf.jpg', "marca": "Volkswagen", "modelo": "Golf", "versao": "2.0 GTI 4P", "cambio": "Automático", "valor": 138.41},
