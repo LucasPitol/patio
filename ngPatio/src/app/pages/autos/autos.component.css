@@ -11,7 +11,7 @@
     margin: auto;
     width: 80%;
     height: 100%;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .carrossel-container {
@@ -22,9 +22,9 @@
     margin: auto;
 }
 
-.mat-spinner::ng-deep circle {
+/* .mat-spinner::ng-deep circle {
     stroke: #3F51B5;
-}
+} */
 
 /***************************
 ********** FILTRO **********
