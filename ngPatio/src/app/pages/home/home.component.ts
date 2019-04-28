@@ -24,9 +24,14 @@ export class HomeComponent {
 	
 	filterForm = {
 		tipoVeiculoSelected: '',
-		local: '',
-		dataInicio: Date,
-		dataFim: Date,
+		local: {
+			pais: '',
+			estado: ''
+		},
+		periodo: {
+			dataInicio: '',
+			dataFim: '',
+		},
 		categoria: ''
 	}
 

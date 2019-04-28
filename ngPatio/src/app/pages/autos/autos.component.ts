@@ -49,7 +49,6 @@ export class AutosComponent implements OnInit {
 		this.filterservice.applyFilter.subscribe(
 			filter => {
 				this.filterFormFromHome = filter;
-;
 				this.teste(filter);
 			});
 

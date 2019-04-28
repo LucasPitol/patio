@@ -24,6 +24,11 @@
                     </mat-radio-group>
                 </div>
 
+                <mat-form-field appearance="outline">
+                    <mat-label>País</mat-label>
+                    <input matInput [(ngModel)]="filterForm.local.pais">
+                </mat-form-field>
+
                 <mat-form-field>
                     <mat-label>Categoria</mat-label>
                     <mat-select [(value)]="filterForm.categoria" class="mat-select-content">
