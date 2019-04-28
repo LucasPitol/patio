@@ -45,13 +45,13 @@
 
                     </mat-expansion-panel-header>
 
-                    <mat-form-field>
+                    <mat-form-field appearance="outline">
                         <input matInput [matDatepicker]="pickerIni" placeholder="Data inicio" [(ngModel)]="filterForm.periodo.dataInicio">
                         <mat-datepicker-toggle matSuffix [for]="pickerIni"></mat-datepicker-toggle>
                         <mat-datepicker #pickerIni></mat-datepicker>
                     </mat-form-field>
 
-                    <mat-form-field>
+                    <mat-form-field appearance="outline">
                         <input matInput [matDatepicker]="pickerFim" placeholder="Data Fim" [(ngModel)]="filterForm.periodo.dataFim">
                         <mat-datepicker-toggle matSuffix [for]="pickerFim"></mat-datepicker-toggle>
                         <mat-datepicker #pickerFim></mat-datepicker>
