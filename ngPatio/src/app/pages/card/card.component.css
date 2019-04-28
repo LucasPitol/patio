@@ -44,11 +44,14 @@
 }
 
 .bottom {
-    position: relative;
+    width: 210px;
+    position: absolute;
+    bottom: 20px;
     /* width: 200px; */
 }
 
 .valor {
+    margin-right: 5px;
     position: relative;
     float: right;
 }
