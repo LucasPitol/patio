@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing } from './app.router';
 
-import { MatTabsModule, MatLabel, MatFormField, MatIcon, MatHint, MatFormFieldModule, MatInputModule, MatRippleModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule, MatSelectModule, MatAutocompleteModule, MatRadioModule, MatSidenavModule, MatExpansionModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { MatTabsModule, MatLabel, MatFormField, MatIcon, MatHint, MatFormFieldModule, MatInputModule, MatRippleModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule, MatSelectModule, MatAutocompleteModule, MatRadioModule, MatSidenavModule, MatExpansionModule, MatDatepickerModule, MatNativeDateModule, MatDividerModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './pages/header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AutosComponent } from './pages/autos/autos.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -51,7 +51,10 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling';
     MatSidenavModule,
     MatExpansionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDividerModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
   ],
   providers: [
     FilterService

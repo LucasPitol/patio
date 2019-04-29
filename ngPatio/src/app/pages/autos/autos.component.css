@@ -60,5 +60,18 @@
 
 .filter-sidenav {
     padding: 20px;
-    width: 350px;
+    width: 400px;
+}
+
+.not-expansible-div {
+    margin-top: 20px;
+}
+
+.not-expansible-span {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.divider {
+    margin-top: 20px;
 }
