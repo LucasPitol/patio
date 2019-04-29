@@ -21,6 +21,8 @@ export class AutosComponent implements OnInit {
 
 	loading = true;
 
+	TiposVeiculo: string[] = ['Passeio', 'Taxi'];
+
 	filterForm = {
 		tipoVeiculoSelected: '',
 		local: {

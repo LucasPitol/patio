@@ -38,27 +38,30 @@ export class HomeComponent {
 		categoria: ''
 	}
 
-	myControl = new FormControl();
-	options: string[] = ['One', 'Two', 'Three'];
-	filteredOptions: Observable<string[]>;
+	paisControl = new FormControl();
+	paisOptions: string[] = ['Brasil', 'Eua', 'Portugal'];
+	filteredOptionsPais: Observable<string[]>;
   
 	ngOnInit() {
-		this.filteredOptions = this.myControl.valueChanges
+		this.filteredOptionsPais = this.paisControl.valueChanges
 			.pipe(
 			startWith(''),
 			map(value => this._filter(value))
 		);
 	}
-  
+
 	private _filter(value: string): string[] {
-	  	const filterValue = value.toLowerCase();
-  
-	  	return this.options.filter(option => option.toLowerCase().includes(filterValue));
+		const filterValue = value.toLowerCase();
+		
+		let opt = this.paisOptions.filter(option => option.toLowerCase().includes(filterValue));
+
+	  	return opt;
 	}
 
 	goToListagemCards()
 	{
 		this.filterService.storeFilter(this.filterForm);
+
 
 		Utils.goToListagemCards(this.router);
 	}
