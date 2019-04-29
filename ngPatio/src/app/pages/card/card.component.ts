@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Utils } from '../../utils/utils';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card-component',
@@ -7,5 +9,11 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
 	@Input("card") card: any;
+
+	constructor(private router: Router) { }
   
+	goToAnuncio(id)
+	{
+		Utils.goToAnuncio(id);
+	}
 }

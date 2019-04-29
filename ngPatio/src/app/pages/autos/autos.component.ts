@@ -21,6 +21,8 @@ export class AutosComponent implements OnInit {
 
 	loading = true;
 
+	TiposVeiculo: string[] = ['Passeio', 'Taxi'];
+
 	filterForm = {
 		tipoVeiculoSelected: '',
 		local: {
@@ -40,8 +42,9 @@ export class AutosComponent implements OnInit {
 	serializedDate = new FormControl((new Date()).toISOString());
 
 	cards = [
-		{"id": 1, "imageUrl": 'assets/golf.jpg', "marca": "Volkswagen", "modelo": "Golf", "versao": "2.0 GTI 4P", "cambio": "Automático", "valor": 138.41},
-		{"id": 2, "imageUrl": 'https://abrilquatrorodas.files.wordpress.com/2018/02/ford-ka_plus-2019-1600-06.jpg?quality=70&strip=info&strip=info', "marca": "Ford", "modelo": "KA +", "versao": "1.5 Sigma 4P", "cambio": "Manual", "valor": 55.67}
+		{"id": 1, "imageUrl": 'assets/golf.jpg', "marca": "Volkswagen", "modelo": "Golf", "versao": "2.0 GTI 4P", "cambio": "Automático", "valor": 168.41},
+		{"id": 2, "imageUrl": 'https://abrilquatrorodas.files.wordpress.com/2018/02/ford-ka_plus-2019-1600-06.jpg?quality=70&strip=info&strip=info', "marca": "Ford", "modelo": "KA +", "versao": "1.5 Sigma 4P", "cambio": "Manual", "valor": 55.67},
+		{"id": 3, "imageUrl": 'https://www.cstatic-images.com/car-pictures/xl/usc70toc041g021001.png', "marca": "Toyota", "modelo": "Corolla", "versao": "2.0 XRS 4P", "cambio": "Automático", "valor": 132.51},
 	];
 	
 	ngOnInit() {

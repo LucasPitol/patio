@@ -42,7 +42,8 @@
 .divisor {
     margin-right: 20px;
     float: right;
-    background-color: rgb(82, 46, 145);
+    /* background-color: #522e91; */
+    background-color: #9C27B0;
     width: 1px;
     height: 40px;
 }

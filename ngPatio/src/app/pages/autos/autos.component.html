@@ -2,9 +2,20 @@
     <mat-drawer-container class="container" autosize>
 
         <mat-drawer #filterBar class="filter-sidenav" mode="side">
-            <p>Filtro</p>
-            
+
             <mat-accordion>
+
+                <div class="radio">
+                        <mat-radio-group
+                            aria-labelledby="example-radio-group-label"
+                            class="example-radio-group"
+                            [(ngModel)]="filterForm.tipoVeiculoSelected">
+                        <mat-radio-button class="example-radio-button" *ngFor="let tipoVeiculo of TiposVeiculo" [value]="tipoVeiculo">
+                            {{tipoVeiculo}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
 

@@ -19,6 +19,7 @@ import { CardComponent } from './pages/card/card.component';
 import { AnunciarComponent } from './pages/anunciar/anunciar.component';
 import { FilterService } from './services/filter-service';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { AnuncioComponent } from './pages/anuncio/anuncio.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling';
     HomeComponent,
     AutosComponent,
     CardComponent,
-    AnunciarComponent
+    AnunciarComponent,
+    AnuncioComponent
   ],
   imports: [
     routing,

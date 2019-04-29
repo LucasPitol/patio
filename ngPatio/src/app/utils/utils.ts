@@ -20,5 +20,12 @@ export const Utils =
 	goToListagemCards: function(router: Router)
 	{
 		router.navigate(["autos"])
+	},
+
+	goToAnuncio: function(idAnuncio: number)
+	{
+		let url = 'http://localhost:4200/anuncio/'
+
+		window.open(url + idAnuncio);
 	}
 }
