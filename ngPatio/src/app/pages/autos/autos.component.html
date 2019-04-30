@@ -51,7 +51,7 @@
                         </mat-panel-title>
 
                         <mat-panel-description>
-                            {{filterForm.periodo.dataInicio}} - {{filterForm.periodo.dataFim}}
+                            {{filterForm.periodo.dataInicio | date: 'dd/MM/yyy'}} - {{filterForm.periodo.dataFim | date: 'dd/MM/yyy'}}
                         </mat-panel-description>
 
                     </mat-expansion-panel-header>
@@ -118,6 +118,22 @@
             <button class="filter-btn" type="button" mat-raised-button (click)="filterBar.toggle()">
                     <img [src]="filterImageUrl"> <span>Filtrar</span>
             </button>
+
+            <!-- Filtros ativos -->
+            <section class="active-section">
+
+                <div *ngIf="filterForm.periodo.dataInicio != null && filterForm.periodo.dataInicio != ''" 
+                class="selected-filter">
+                    <span>
+                        {{filterForm.periodo.dataInicio | date: 'dd/MM/yyy'}}
+                    </span>
+                    <div class="close-image-div" (click)="filterForm.periodo.dataInicio = ''">
+                        <img [src]="closeImageUrl">
+                    </div>
+                </div>
+
+            </section>
+
         </div>
 
 
