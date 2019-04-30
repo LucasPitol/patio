@@ -69,6 +69,38 @@
                     </mat-form-field>
 
                 </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+
+                        <mat-panel-title>
+                            <span>
+                                <strong>Veículo</strong>
+                            </span>
+                        </mat-panel-title>
+
+                        <mat-panel-description>
+                            {{filterForm.veiculo.marca}} {{filterForm.veiculo.modelo}}
+                        </mat-panel-description>
+
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Marca</mat-label>
+                        <input matInput [(ngModel)]="filterForm.veiculo.marca">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Modelo</mat-label>
+                        <input matInput [(ngModel)]="filterForm.veiculo.modelo">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Versão</mat-label>
+                        <input matInput [(ngModel)]="filterForm.veiculo.versao">
+                    </mat-form-field>
+
+                </mat-expansion-panel>
                 
                 <div class="not-expansible-div">
                     <span class="not-expansible-span">

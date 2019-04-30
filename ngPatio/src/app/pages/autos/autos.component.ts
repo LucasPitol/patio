@@ -33,7 +33,12 @@ export class AutosComponent implements OnInit {
 			dataInicio: '',
 			dataFim: '',
 		},
-		categoria: ''
+		categoria: '',
+		veiculo: {
+			marca: '',
+			modelo: '',
+			versao: ''
+		}
 	}
 
 	public datePickerLabel: string;
