@@ -110,7 +110,7 @@
 }
 
 .selected-filter span{
-    margin-top:4px;
+    padding-top: 4px;
     margin-left: 10px;
     color: white;
 }
