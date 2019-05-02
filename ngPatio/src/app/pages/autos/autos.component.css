@@ -99,6 +99,7 @@
 
 .active-section {
     margin-top: 15px;
+    display: inline-flex;
 }
 
 .selected-filter {
@@ -114,6 +115,7 @@
     position: relative;
     top: 4px;
     margin-left: 10px;
+    margin-right: 10px;
     color: white;
 }
 
