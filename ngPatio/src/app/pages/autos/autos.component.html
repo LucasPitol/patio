@@ -132,8 +132,18 @@
                     </div>
                 </div>
 
-            </section>
+                <div *ngIf="filterForm.periodo.dataFim != null && filterForm.periodo.dataFim != ''" 
+                class="selected-filter">
+                    <span>
+                        {{filterForm.periodo.dataFim | date: 'dd/MM/yyy'}}
+                    </span>
+                    <div class="close-image-div" (click)="filterForm.periodo.dataFim = ''">
+                        <img [src]="closeImageUrl">
+                    </div>
+                </div>
 
+            </section>
+            
         </div>
 
 

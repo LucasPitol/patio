@@ -56,12 +56,13 @@
 
 .filter-sidenav-content {
     display: flex;
-    height: 100%;
+    /* height: 100%; */
+    height: 80px;
 }
 
 .filter-sidenav {
     padding: 20px;
-    width: 350px;
+    width: 380px;
 }
 
 .not-expansible-div {
@@ -98,6 +99,7 @@
 
 .active-section {
     margin-top: 15px;
+    display: inline-flex;
 }
 
 .selected-filter {
@@ -110,8 +112,10 @@
 }
 
 .selected-filter span{
-    padding-top: 4px;
+    position: relative;
+    top: 4px;
     margin-left: 10px;
+    margin-right: 10px;
     color: white;
 }
 
