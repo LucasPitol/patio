@@ -404,16 +404,16 @@ log.txt
 .vscode/
 .sass-cache/
 .versions/
-coverage/
-collection/
-dist/
-node_modules/
-tmp/
-temp/
-core/theme-builder/
-core/test-components/
-core/css/
-angular/css/
+patioApp/coverage/
+patioApp/collection/
+patioApp/dist/
+patioApp/node_modules/
+patioApp/tmp/
+patioApp/temp/
+patioApp/core/theme-builder/
+patioApp/core/test-components/
+patioApp/core/css/
+patioApp/angular/css/
 $RECYCLE.BIN/
 
 .DS_Store
@@ -423,24 +423,24 @@ UserInterfaceState.xcuserstate
 
 .package.tmp.json
 
-src/themes/version.scss
-scripts/e2e/webpackEntryPoints.json
-scripts/build/e2e-generated-tsconfig.json
+patioApp/src/themes/version.scss
+patioApp/scripts/e2e/webpackEntryPoints.json
+patioApp/scripts/build/e2e-generated-tsconfig.json
 *.css.ts
 
-stats.json
+patioApp/stats.json
 
 # demo stuff
-demos/node_modules
-demos/polyfills
-demos/css
-demos/fonts
-demos/src/**/*.js
-demos/src/**/*.map
-demos/src/**/*.ngfactory.ts
-demos/src/**/*.d.ts
-demos/src/**/*.metadata.json
-demos/src/**/*.css.shim.ts
+patioApp/node_modules
+patioApp/polyfills
+patioApp/css
+patioApp/fonts
+patioApp/src/**/*.js
+patioApp/src/**/*.map
+patioApp/src/**/*.ngfactory.ts
+patioApp/src/**/*.d.ts
+patioApp/src/**/*.metadata.json
+patioApp/src/**/*.css.shim.ts
 
 # stencil
 angular/css/
