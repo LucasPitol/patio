@@ -443,8 +443,8 @@ patioApp/src/**/*.metadata.json
 patioApp/src/**/*.css.shim.ts
 
 # stencil
-angular/css/
-core/css/
-core/loader/
+patioApp/angular/css/
+patioApp/core/css/
+patioApp/core/loader/
 .stencil/
-angular/build/
+patioApp/angular/build/
