@@ -3,3 +3,26 @@
   overflow: hidden;
 }
 
+.subtitle {
+	font-size: 14px;
+    color: rgb(117, 117, 117);
+}
+
+.bottom {
+	position: relative;
+    bottom: 10px;
+    // margin-top: 70px;
+}
+
+.locadora {
+	color: black;
+    position: relative;
+    float: left;
+}
+
+.valor {
+	color: black;
+	// margin-right: 5px;
+    position: relative;
+    float: right;
+}
