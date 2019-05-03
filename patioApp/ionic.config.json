@@ -1,0 +1,7 @@
+{
+  "name": "patioApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
