@@ -448,3 +448,12 @@ patioApp/core/css/
 patioApp/core/loader/
 .stencil/
 patioApp/angular/build/
+
+.idea
+**/node_modules/*
+**/.firebaserc
+*/npm-debug.log
+lerna-debug.log
+*~
+service-account-credentials.json
+**/package-lock.json
