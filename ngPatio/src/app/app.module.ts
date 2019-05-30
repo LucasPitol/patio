@@ -20,6 +20,10 @@ import { AnunciarComponent } from './pages/anunciar/anunciar.component';
 import { FilterService } from './services/filter-service';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { AnuncioComponent } from './pages/anuncio/anuncio.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import { DBService } from './services/db-service';
 
 @NgModule({
   declarations: [
@@ -32,8 +36,10 @@ import { AnuncioComponent } from './pages/anuncio/anuncio.component';
     AnuncioComponent
   ],
   imports: [
-    routing,
-    BrowserModule,
+	routing,
+	BrowserModule,
+	AngularFireModule.initializeApp(environment.firebase),
+	AngularFireDatabaseModule,
     AppRoutingModule,
     // HttpModule,
     HttpClientModule,
@@ -59,7 +65,8 @@ import { AnuncioComponent } from './pages/anuncio/anuncio.component';
     ReactiveFormsModule,
   ],
   providers: [
-    FilterService
+	FilterService,
+	DBService
   ],
   bootstrap: [AppComponent]
 })

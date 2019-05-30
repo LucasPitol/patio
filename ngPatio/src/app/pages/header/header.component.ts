@@ -21,7 +21,7 @@ export class HeaderComponent {
 
     
 
-    title = 'Pátio';
+    title = 'Patio';
 
     searchInput: string;
 
