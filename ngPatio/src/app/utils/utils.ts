@@ -24,8 +24,8 @@ export const Utils =
 
 	goToAnuncio: function(idAnuncio: number)
 	{
-		let url = 'http://localhost:4200/anuncio/'
-
+		let url = 'http://patio-021.firebaseapp.com/anuncio/'
+		
 		window.open(url + idAnuncio);
 	}
 }

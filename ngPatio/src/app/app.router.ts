@@ -8,7 +8,8 @@ const appRoutes: Routes = [
     { path: 'autos', component: AutosComponent},
     { path: 'home', component: HomeComponent },
     { path: 'anunciar', component: AnunciarComponent},
-    { path: 'anuncio/:idanuncio', component: AnuncioComponent }
+	{ path: 'anuncio/:idanuncio', component: AnuncioComponent },
+	{ path: '**', redirectTo: 'home' }
 ]
 
 export const routing = RouterModule.forRoot(appRoutes);
