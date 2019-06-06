@@ -23,10 +23,9 @@ export class HomeComponent {
     dreamCarUrl = 'assets/dream-car.png'
 	
     //tipoVeiculoSelected: string;
-	TiposVeiculo: string[] = ['Passeio', 'Taxi'];
+	categorias: string[] = ['Econômico', 'Esportivo', 'Executivo', 'Taxi', 'SUV'];
 	
 	filterForm = {
-		tipoVeiculoSelected: '',
 		local: {
 			pais: '',
 			estado: ''
