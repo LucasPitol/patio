@@ -18,11 +18,9 @@ export class HomeComponent {
 	constructor(private router: Router,
 				private filterService: FilterService) { }
 
-	// @HostListener('')
 
     dreamCarUrl = 'assets/dream-car.png'
 	
-    //tipoVeiculoSelected: string;
 	categorias: string[] = ['Econômico', 'Esportivo', 'Executivo', 'Taxi', 'SUV'];
 	
 	filterForm = {
@@ -59,9 +57,8 @@ export class HomeComponent {
 
 	goToListagemCards()
 	{
-		this.filterService.storeFilter(this.filterForm);
+		//this.filterService.storeFilter(this.filterForm);
 
-
-		Utils.goToListagemCards(this.router);
+		Utils.goToListagemCards(this.router, this.filterForm);
 	}
 }

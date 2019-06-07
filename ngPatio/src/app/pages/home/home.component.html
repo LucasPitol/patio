@@ -16,7 +16,7 @@
                 <div class="input-box-div">
 
                     <mat-form-field appearance="outline">
-                        <mat-label>País</mat-label>
+                        <mat-label>Localização</mat-label>
     
                         <input type="text" aria-label="Number" matInput 
                             [formControl]="paisControl" 
@@ -28,12 +28,12 @@
                                 {{option}}
                             </mat-option>
                         </mat-autocomplete>
-                    </mat-form-field>
-                    
-    
+					</mat-form-field>
+
+
                     <mat-form-field appearance="outline">
                         <mat-label>Categoria</mat-label>
-                        <mat-select class="mat-select-content">
+                        <mat-select class="mat-select-content" [(ngModel)]="filterForm.categoria">
 							<mat-option>None</mat-option>
 							<mat-option *ngFor="let categoria of categorias" [value]="categoria">{{categoria}}</mat-option>
                         </mat-select>

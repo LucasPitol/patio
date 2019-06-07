@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
 import { FilterService } from 'src/app/services/filter-service';
 import { FormControl } from '@angular/forms';
 import { AngularFireDatabase } from 'angularfire2/database';
@@ -11,11 +11,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 
 export class AutosComponent implements OnInit {
 
+
 	constructor(private filterservice: FilterService, private db: AngularFireDatabase) {
+
+		
 		
 	}
-
-	@HostBinding('class.is-open')
 
 
 	filterImageUrl = 'assets/filter.png';
@@ -26,10 +27,9 @@ export class AutosComponent implements OnInit {
 
 	loading = true;
 
-	TiposVeiculo: string[] = ['Passeio', 'Taxi'];
+	categorias: string[] = ['Econômico', 'Esportivo', 'Executivo', 'Taxi', 'SUV'];
 
 	filterForm = {
-		tipoVeiculoSelected: '',
 		local: {
 			pais: '',
 			estado: ''
@@ -54,18 +54,12 @@ export class AutosComponent implements OnInit {
 
 	ngOnInit() {
 
-		this.filterservice.applyFilter.subscribe(
-			filter => {
-				this.filterFormFromHome = filter;
-				this.teste(filter);
-			});
-
+		// this.filterservice.applyFilter.subscribe(
+		// 	filter => {
+		// 		this.filterFormFromHome = filter;
+		// 		this.teste(filter);
+		// 	});
 		this.getCardsForHome();
-	}
-
-	teste(filter)
-	{
-		console.log(filter);
 	}
 
 	getCardsForHome()

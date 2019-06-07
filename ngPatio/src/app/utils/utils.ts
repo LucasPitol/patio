@@ -17,7 +17,7 @@ export const Utils =
 		router.navigate(["home"])
 	},
 
-	goToListagemCards: function(router: Router)
+	goToListagemCards: function(router: Router, filters:any)
 	{
 		router.navigate(["autos"])
 	},
