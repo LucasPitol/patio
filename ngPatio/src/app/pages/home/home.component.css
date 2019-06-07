@@ -34,18 +34,9 @@
 ************** input ***************
 **************************************/
 
-.example-radio-group {
-    position: relative;
-    top: 10px;
-}
-
-.example-radio-button {
-    margin: 5px;
-}
-
 ::ng-deep .mat-select-content{
     /* width:2000px; */
-    stroke: red !important;
+    /* stroke: red !important; */
     /* font-size: 10px;    */
 }
 
@@ -66,19 +57,24 @@
     border: none;
     border-radius: 3px;
     width: 700px;
-    height: 40px;
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2), 
-                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+	height: 40px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14),
                 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .input-box-div {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .mat-form-field {
+	margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.date-input {
+	width: 205px;
 }
 
 /*************************************

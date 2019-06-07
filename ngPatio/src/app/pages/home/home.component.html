@@ -39,7 +39,21 @@
                         </mat-select>
                     </mat-form-field>
 
-                </div>
+				</div>
+
+				<div>
+					<mat-form-field appearance="outline" class="date-input" >
+						<input matInput [matDatepicker]="pickerIni" placeholder="Data inicio" [(ngModel)]="filterForm.periodo.dataInicio">
+                        <mat-datepicker-toggle matSuffix [for]="pickerIni"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerIni></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="date-input" >
+                        <input matInput [matDatepicker]="pickerFim" placeholder="Data Fim" [(ngModel)]="filterForm.periodo.dataFim">
+                        <mat-datepicker-toggle matSuffix [for]="pickerFim"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerFim></mat-datepicker>
+                    </mat-form-field>
+				</div>
 
 
                 <div class="search-button">
